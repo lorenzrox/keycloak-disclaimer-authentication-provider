@@ -4,7 +4,7 @@
 
     <groupId>org.keycloak</groupId>
     <artifactId>keycloak-disclaimer-authentication-provider</artifactId>
-    <version>22.0.0</version>
+    <version>23.0.0</version>
     <packaging>jar</packaging>
     <name>KeyCloak: 'Accept disclaimer' authentication Provider</name>
     <description>KeyCloak: 'Accept disclaimer' authentication Provider</description>
