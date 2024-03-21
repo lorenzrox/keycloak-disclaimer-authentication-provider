@@ -1,4 +1,4 @@
-package org.keycloak.authentication.authenticators.browser;
+package org.keycloak.authentication.authenticators.access;
 
 import org.keycloak.Config;
 import org.keycloak.authentication.Authenticator;
@@ -12,7 +12,11 @@ import java.util.List;
 
 public class DisclaimerAuthenticatorFactory implements AuthenticatorFactory {
     public static final String PROVIDER_ID = "login-disclaimer";
-    private static DisclaimerAuthenticator SINGLETON = new DisclaimerAuthenticator();
+
+    private static final AuthenticationExecutionModel.Requirement[] REQUIREMENT_CHOICES = {
+            AuthenticationExecutionModel.Requirement.REQUIRED,
+            AuthenticationExecutionModel.Requirement.DISABLED
+    };
 
     @Override
     public String getHelpText() {
@@ -56,12 +60,10 @@ public class DisclaimerAuthenticatorFactory implements AuthenticatorFactory {
 
     @Override
     public void init(Config.Scope config) {
-
     }
 
     @Override
     public void postInit(KeycloakSessionFactory factory) {
-
     }
 
     @Override
@@ -71,6 +73,6 @@ public class DisclaimerAuthenticatorFactory implements AuthenticatorFactory {
 
     @Override
     public Authenticator create(KeycloakSession session) {
-        return SINGLETON;
+        return DisclaimerAuthenticator.SINGLETON;
     }
 }

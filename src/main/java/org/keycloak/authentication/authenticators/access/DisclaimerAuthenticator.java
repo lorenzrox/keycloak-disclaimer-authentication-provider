@@ -1,4 +1,4 @@
-package org.keycloak.authentication.authenticators.browser;
+package org.keycloak.authentication.authenticators.access;
 
 import org.keycloak.authentication.AuthenticationFlowContext;
 import org.keycloak.authentication.Authenticator;
@@ -10,6 +10,8 @@ import jakarta.ws.rs.core.MultivaluedMap;
 import jakarta.ws.rs.core.Response;
 
 public class DisclaimerAuthenticator implements Authenticator {
+    public static final DisclaimerAuthenticator SINGLETON = new DisclaimerAuthenticator();
+
     @Override
     public void close() {
     }

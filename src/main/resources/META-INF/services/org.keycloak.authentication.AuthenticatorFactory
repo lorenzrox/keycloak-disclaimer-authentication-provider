@@ -1,2 +1,2 @@
 
-org.keycloak.authentication.authenticators.browser.DisclaimerAuthenticatorFactory
+org.keycloak.authentication.authenticators.access.DisclaimerAuthenticatorFactory
